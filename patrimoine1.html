@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site de métallurgie de Tiwêga</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #00b4d8;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      background-color: #1e293b;
+      padding: 25px;
+      line-height: 1.8;
+      border-left: 6px solid #fb8500;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .intro strong {
+      color: #ffd166;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 4px solid skyblue;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-nav {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .footer-nav a {
+      display: inline-block;
+      background-color: #00b4d8;
+      color: #0f172a;
+      margin: 10px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .footer-nav a:hover {
+      background-color: #009ec4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: #ccc;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Le site de Tiwêga</h1>
+
+  <div class="intro">
+    <p>
+      Situé à environ 5 km à l’ouest de Kaya, le site de Tiwêga témoigne du savoir-faire métallurgique ancestral des peuples du Centre-Nord.  
+      On y trouve encore <strong>trois fourneaux traditionnels remarquablement conservés, utilisant un système de tirage naturel pour la réduction du fer.
+    </p>
+    <p>
+      D’une hauteur moyenne de 2,60 mètres, ces fourneaux tronconiques ont été édifiés avec des fragments de tuyères, de scories et d'argile.  
+      C’est un lieu historique classé comme témoin d’un patrimoine industriel africain unique.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <img src="1-28.jpg" alt="Fourneau Tiwêga 1">
+    <img src="tiwega1.png" alt="Fourneau Tiwêga 2">
+    <img src="tiwega2.jpg" alt="Fourneau Tiwêga 3">
+    <img src="OIP.jpg" alt="Vue aérienne du site">
+  </div>
+
+  <div class="footer-nav">
+    <a href="projet1.html">Accueil</a>
+    <a href="patrimoine.html">Patrimoine</a>
+    <a href="galerie.html"> Galerie</a>
+    <a href="hotel.html"> Hôtel</a>
+  </div>
+
+  <footer>
+    Réalisé par Sawadogo Blaise & Sangla A. Jérémie — © ESI Promotion 24 — GAGAMOU
+  </footer>
+
+</body>
+</html>

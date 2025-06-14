@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta name="viewpor" content="width=device-width, initial-scale=1.0">
+
+
+
+  <meta charset="UTF-8">
+  <title>Album 7 Photos</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 40px;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #024;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .photo {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border: 5px solid skyblue;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body style=" background:url('logos.jpg');">>
+  <h1>MUSE DES FOURNEAU AFRICAIN </h1>
+  <div class="gallery">
+    <div class="photo"><img src="1-32.webp" alt="Photo 1"></div>
+    <div class="photo"><img src="meta0.webp" alt="Photo 2"></div>
+    <div class="photo"><img src="meta1.jpg" alt="Photo 3"></div>
+    <div class="photo"><img src="meta2.jpg" alt="Photo 4"></div>
+    <div class="photo"><img src="meta3.jpg" alt="Photo 5"></div>
+    <div class="photo"><img src="meta4.jpg" alt="Photo 6"></div>
+    <div class="photo"><img src="meta20.webp" alt="Photo 7"></div>
+  </div><a href="galerie.html" style="display: inline-block; margin: 20px; padding: 10px 15px; background-color: blue; color: white; text-decoration: none; border-radius: 5px;">
+  ← Retour à l’album principal
+</a>
+</body>
+</html>

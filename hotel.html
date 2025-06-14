@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hôtels à Kaya</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #00b4d8;
+    }
+
+    .hotel-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hotel-card {
+      border: 4px solid skyblue;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #1e293b;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .hotel-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 50px auto 0;
+      padding: 20px;
+      border: 4px solid skyblue;
+      border-radius: 10px;
+      background-color: #1e293b;
+    }
+
+    form label, form p, form legend {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1em;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #00b4d8;
+      color: #0f172a;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #009ec4;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #ffd166;
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    .footer-nav {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .footer-nav a {
+      display: inline-block;
+      background-color: #00b4d8;
+      color: #0f172a;
+      margin: 10px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .footer-nav a:hover {
+      background-color: #009ec4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: #ccc;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📌 Liste des hôtels à Kaya</h2>
+
+  <div class="hotel-list">
+    <div class="hotel-card">
+      <h3>Hôtel Pacifique</h3>
+      <img src="pacif.jpg" alt="Hôtel Pacifique" />
+    </div>
+    <div class="hotel-card">
+      <h3>Hôtel Grâce Divine</h3>
+      <img src="div.jpg" alt="Hôtel Grâce Divine" />
+    </div>
+    <div class="hotel-card">
+      <h3>Hôtel Zam</h3>
+      <img src="zam.jpg" alt="Hôtel Zam" />
+    </div>
+  </div>
+
+  <form onsubmit="mess(); return false;">
+    <legend><i>Réservez votre séjour :</i></legend>
+
+    <label for="hotel">Choix de l'hôtel :</label>
+    <select id="hotel">
+      <option value="h1">Hôtel Pacifique</option>
+      <option value="h2">Hôtel Grâce Divine</option>
+      <option value="h3">Hôtel Zam</option>
+    </select>
+
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" />
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" />
+
+    <label for="nbr">Durée du séjour (en jours) :</label>
+    <input type="number" id="nbr" />
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" />
+
+    <p>Chambre climatisée :</p>
+    <input type="radio" name="clim" id="climOui" value="oui" /> Oui
+    <input type="radio" name="clim" id="climNon" value="non" /> Non
+
+    <button type="submit">Envoyer</button>
+
+    <p id="message"></p>
+  </form>
+
+  <div class="footer-nav">
+    <a href="projet1.html"> Accueil</a>
+    <a href="patrimoine.html"> Patrimoine</a>
+    <a href="galerie.html"> Galerie</a>
+    <a href="hotel.html"> Hôtel</a>
+  </div>
+
+  <footer>
+    Réalisé par Sawadogo Blaise & Sangla A. Jérémie — © ESI Promotion 24 — GAGAMOU
+  </footer>
+
+  <script>
+    function mess() {
+      const nom = document.getElementById("nom").value.trim();
+      const prenom = document.getElementById("prenom").value.trim();
+      const jours = parseInt(document.getElementById("nbr").value);
+      const email = document.getElementById("email").value.trim();
+      const clim = document.getElementById("climOui").checked;
+
+      const message = document.getElementById("message");
+
+      if (nom && prenom && jours > 0 && email && clim) {
+        message.innerHTML = "Demande acceptée avec succès. Vous recevrez une notification.";
+      } else {
+        message.innerHTML = "Demande échouée. Merci de remplir tous les champs correctement.";
+      }
+    }
+  </script>
+
+</body>
+</html>

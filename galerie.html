@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie Photo — Kaya</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.6em;
+      margin-bottom: 40px;
+      color: #00b4d8;
+    }
+
+    .albums {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .album {
+      background-color: #1e293b;
+      border-left: 6px solid #fb8500;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .album:hover {
+      transform: translateY(-5px);
+      background-color: #2b3f56;
+    }
+
+    .album img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 4px solid #000;
+    }
+
+    .album-title {
+      padding: 16px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1em;
+      color: #ffd166;
+    }
+
+    .footer-nav {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .footer-nav a {
+      display: inline-block;
+      background-color: #00b4d8;
+      color: #0f172a;
+      margin: 10px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .footer-nav a:hover {
+      background-color: #009ec4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: #ccc;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galerie Photo de Kaya</h1>
+
+  <div class="albums">
+    <a href="gal1.html" class="album">
+      <img src="tiwega2.jpg" alt="Album Tiwêga" />
+      <div class="album-title">Site de Tiwêga</div>
+    </a>
+    <a href="gal2.html" class="album">
+      <img src="1-32.webp" alt="Fourneaux" />
+      <div class="album-title">Musée des Fourneaux Africains</div>
+    </a>
+    <a href="gal3.html" class="album">
+      <img src="muse.webp" alt="Musée de Kaya" />
+      <div class="album-title">Musée ethnographique</div>
+    </a>
+    <a href="gal5.html" class="album">
+      <img src="festival12.jpg" alt="Festival" />
+      <div class="album-title">Festival Kaya Nooma</div>
+    </a>
+    <a href="gal4.html" class="album">
+      <img src="bk1.webp" alt="Brochettes" />
+      <div class="album-title">Brochette & Koura Koura</div>
+    </a>
+    <a href="gal6.html" class="album">
+      <img src="lac4.jpg" alt="Lac Dem" />
+      <div class="album-title">Lac Dem</div>
+    </a>
+    <a href="gal7.html" class="album">
+      <img src="ki6.jpg" alt="Naab Kitoaga" />
+      <div class="album-title">Sanmatenga Naab Kitoaga</div>
+    </a>
+    <a href="gal8.html" class="album">
+      <img src="cuir0.jpg" alt="Maroquinerie" />
+      <div class="album-title">Maroquinerie</div>
+    </a>
+    <a href="gal9.html" class="album">
+      <img src="sale0.jpg" alt="Salle Polyvalente" />
+      <div class="album-title">Salle Polyvalente</div>
+    </a>
+    <a href="gal10.html" class="album">
+      <img src="vil0.webp" alt="Zablo" />
+      <div class="album-title">Village de Zablo</div>
+    </a>
+  </div>
+
+  <div class="footer-nav">
+    <a href="projet1.html"> Accueil</a>
+    <a href="patrimoine.html">Patrimoine</a>
+    <a href="galerie.html"> Galerie</a>
+    <a href="hotel.html"> Hôtel</a>
+  </div>
+
+  <footer>
+    Réalisé par Sawadogo Blaise & Sangla A. Jérémie — © ESI Promotion 24 — GAGAMOU
+  </footer>
+
+</body>
+</html>
